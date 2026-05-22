@@ -31,7 +31,7 @@ body {
     var(--bg);
   background-size: auto;
   color: var(--ink);
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   letter-spacing: 0;
   overflow-x: hidden;
 }
@@ -155,7 +155,7 @@ a {
 .hero-title h1 {
   margin: 0;
   color: var(--blue);
-  font-family: "Arial Black", Impact, Inter, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: clamp(42px, 3.9vw, 58px);
   line-height: 0.88;
   text-transform: uppercase;
@@ -182,7 +182,7 @@ a {
   display: inline-block;
   margin-top: 38px;
   color: var(--blue);
-  font-family: "Arial Black", Impact, Inter, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: clamp(32px, 4vw, 54px);
   line-height: 1;
   text-transform: uppercase;
@@ -221,7 +221,7 @@ a {
 
 .name-block h2 {
   margin: 0 0 22px;
-  font-family: "Arial Black", Impact, Inter, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: clamp(38px, 5.9vw, 72px);
   line-height: 0.88;
   text-transform: uppercase;
@@ -272,7 +272,7 @@ a {
 h3,
 .outside-heading {
   margin: 0 0 22px;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 34px;
   line-height: 1;
   text-transform: uppercase;
