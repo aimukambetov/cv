@@ -21,8 +21,30 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stagger .card,
+.stagger .photo-card,
+.stagger .bottom-button,
+.stagger .outside-heading,
+.stagger .role-tag {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger .revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--i, 0) * 30ms);
+}
+
 body {
   position: relative;
+  animation: fade-in 1.5s ease-out both;
   margin: 0;
   background:
     radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.98), transparent 32%),
@@ -46,10 +68,21 @@ body::before {
     radial-gradient(circle at 18% 26%, rgba(6, 76, 255, 0.48) 0 78px, transparent 82px),
     radial-gradient(circle at 72% 16%, rgba(0, 138, 255, 0.34) 0 108px, transparent 114px),
     radial-gradient(circle at 84% 72%, rgba(6, 76, 255, 0.36) 0 88px, transparent 94px),
-    radial-gradient(circle at 24% 82%, rgba(47, 115, 255, 0.25) 0 132px, transparent 138px);
+    radial-gradient(circle at 24% 82%, rgba(47, 115, 255, 0.25) 0 132px, transparent 138px),
+    radial-gradient(circle at 45% 45%, rgba(0, 100, 255, 0.15) 0 160px, transparent 166px),
+    radial-gradient(circle at 10% 55%, rgba(6, 76, 255, 0.3) 0 60px, transparent 64px),
+    radial-gradient(circle at 90% 40%, rgba(0, 138, 255, 0.2) 0 72px, transparent 76px),
+    radial-gradient(circle at 55% 90%, rgba(47, 115, 255, 0.2) 0 96px, transparent 100px),
+    radial-gradient(circle at 33% 15%, rgba(0, 80, 255, 0.28) 0 52px, transparent 56px),
+    radial-gradient(circle at 60% 55%, rgba(0, 120, 255, 0.18) 0 140px, transparent 146px),
+    radial-gradient(circle at 5% 40%, rgba(6, 76, 255, 0.22) 0 68px, transparent 72px),
+    radial-gradient(circle at 75% 85%, rgba(0, 138, 255, 0.26) 0 48px, transparent 52px),
+    radial-gradient(circle at 40% 70%, rgba(47, 115, 255, 0.15) 0 120px, transparent 126px),
+    radial-gradient(circle at 88% 30%, rgba(6, 76, 255, 0.2) 0 86px, transparent 90px),
+    radial-gradient(circle at 15% 92%, rgba(0, 100, 255, 0.24) 0 74px, transparent 78px);
   filter: blur(34px);
   opacity: 0.85;
-  animation: blue-orbs 16s ease-in-out infinite alternate;
+  animation: blue-orbs 12s ease-in-out infinite alternate;
 }
 
 a {
@@ -57,12 +90,19 @@ a {
 }
 
 @keyframes blue-orbs {
-  from {
-    transform: translate3d(-2%, -1%, 0) scale(1);
+  0% {
+    transform: translate3d(-4%, -2%, 0) scale(1);
+    opacity: 0.7;
   }
 
-  to {
-    transform: translate3d(2%, 2%, 0) scale(1.08);
+  50% {
+    transform: translate3d(1%, 1%, 0) scale(1.12);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(4%, 3%, 0) scale(0.96);
+    opacity: 0.8;
   }
 }
 
