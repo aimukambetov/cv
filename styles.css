@@ -182,14 +182,32 @@ a {
   justify-content: space-between;
 }
 
-.eyebrow,
-.portfolio-card span,
 .link-card span,
 .mini-card span {
   margin: 0;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 700;
+}
+
+.hero-title .lang-toggle {
+  align-self: flex-start;
+  width: 48px;
+  height: 36px;
+  border: 2px solid var(--blue);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--blue);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-title .lang-toggle:hover {
+  background: var(--blue);
+  color: white;
 }
 
 .hero-title h1 {
@@ -212,30 +230,33 @@ a {
   font-weight: 500;
 }
 
-.portfolio-card {
+.github-card {
   position: relative;
   grid-column: span 2;
   text-decoration: none;
+  background: #171515;
+  color: white;
 }
 
-.portfolio-card strong {
+.github-card strong {
   display: inline-block;
   margin-top: 38px;
-  color: var(--blue);
+  color: white;
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: clamp(32px, 4vw, 54px);
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0;
-  border-bottom: 3px solid var(--blue);
+  border-bottom: 3px solid white;
 }
 
-.portfolio-card b {
+.gh-icon {
   position: absolute;
   top: 18px;
   right: 28px;
-  font-size: 56px;
-  line-height: 1;
+  width: 48px;
+  height: 48px;
+  color: white;
 }
 
 .link-card,
@@ -477,6 +498,26 @@ h3,
     linear-gradient(125deg, var(--charcoal), #151515);
 }
 
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #ff0000;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.youtube-btn:hover {
+  opacity: 0.85;
+}
+
 .bottom-button {
   display: block;
   margin: 72px auto 0;
@@ -510,7 +551,7 @@ h3,
 
   .photo-card,
   .hero-title,
-  .portfolio-card {
+  .github-card {
     grid-column: auto;
     grid-row: auto;
   }
@@ -523,7 +564,7 @@ h3,
     min-height: 280px;
   }
 
-  .portfolio-card,
+  .github-card,
   .link-card,
   .mini-card {
     min-height: 130px;
