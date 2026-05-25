@@ -182,7 +182,6 @@ a {
   justify-content: space-between;
 }
 
-.link-card span,
 .mini-card span {
   margin: 0;
   text-transform: uppercase;
@@ -230,14 +229,6 @@ a {
   font-weight: 500;
 }
 
-.github-card {
-  position: relative;
-  grid-column: span 2;
-  text-decoration: none;
-  background: #171515;
-  color: white;
-}
-
 .github-card strong {
   display: inline-block;
   margin-top: 38px;
@@ -258,7 +249,7 @@ a {
   color: white;
 }
 
-.link-card,
+.linkedin-card,
 .mini-card {
   display: flex;
   flex-direction: column;
@@ -266,11 +257,48 @@ a {
   text-decoration: none;
 }
 
-.link-card strong,
+.linkedin-card {
+  background: #171515;
+  color: white;
+  position: relative;
+}
+
+.github-card {
+  position: relative;
+  grid-column: span 2;
+  text-decoration: none;
+  background: #0a66c2;
+  color: white;
+}
+
+.linkedin-card span,
+
+.github-card {
+  position: relative;
+  grid-column: span 2;
+  text-decoration: none;
+  background: #171515;
+  color: white;
+}
+
+.linkedin-card span,
+.linkedin-card strong {
+  color: white;
+}
+
+.linkedin-card strong,
 .mini-card strong {
-  color: var(--blue);
   font-size: 24px;
   text-transform: uppercase;
+}
+
+.li-icon {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  color: white;
 }
 
 .name-block {
@@ -562,7 +590,7 @@ h3,
   }
 
   .github-card,
-  .link-card,
+  .linkedin-card,
   .mini-card {
     min-height: 130px;
   }
