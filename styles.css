@@ -229,7 +229,34 @@ a {
   font-weight: 500;
 }
 
-.github-card strong {
+.hero-profile {
+  grid-column: span 2;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.hero-profile h3 {
+  margin: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero-profile p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.github-card strong,
+.linkedin-card strong {
   display: inline-block;
   margin-top: 38px;
   color: white;
@@ -240,13 +267,21 @@ a {
   letter-spacing: 0;
 }
 
-.gh-icon {
+.gh-icon,
+.li-icon {
   position: absolute;
   top: 18px;
   right: 28px;
   width: 48px;
   height: 48px;
   color: white;
+}
+
+.github-card {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  background: #171515;
 }
 
 .linkedin-card,
@@ -258,47 +293,15 @@ a {
 }
 
 .linkedin-card {
-  background: #171515;
-  color: white;
-  position: relative;
-}
-
-.github-card {
-  position: relative;
-  grid-column: span 2;
-  text-decoration: none;
   background: #0a66c2;
   color: white;
-}
-
-.linkedin-card span,
-
-.github-card {
   position: relative;
   grid-column: span 2;
-  text-decoration: none;
-  background: #171515;
-  color: white;
 }
 
-.linkedin-card span,
-.linkedin-card strong {
-  color: white;
-}
-
-.linkedin-card strong,
 .mini-card strong {
   font-size: 24px;
   text-transform: uppercase;
-}
-
-.li-icon {
-  position: absolute;
-  top: 18px;
-  right: 28px;
-  width: 48px;
-  height: 48px;
-  color: white;
 }
 
 .name-block {
@@ -576,7 +579,7 @@ h3,
 
   .photo-card,
   .hero-title,
-  .github-card {
+  .hero-profile {
     grid-column: auto;
     grid-row: auto;
   }
@@ -589,10 +592,8 @@ h3,
     min-height: 280px;
   }
 
-  .github-card,
-  .linkedin-card,
-  .mini-card {
-    min-height: 130px;
+  .hero-profile {
+    min-height: 200px;
   }
 
   .name-block {
