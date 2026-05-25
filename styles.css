@@ -173,7 +173,8 @@ a {
 }
 
 [data-theme="dark"] .experience-card time,
-[data-theme="dark"] .course-card time {
+[data-theme="dark"] .course-card time,
+[data-theme="dark"] .edu-location {
   color: var(--muted);
 }
 
@@ -244,7 +245,8 @@ a {
   }
 
   :root:not([data-theme="light"]) .experience-card time,
-  :root:not([data-theme="light"]) .course-card time {
+  :root:not([data-theme="light"]) .course-card time,
+  :root:not([data-theme="light"]) .edu-location {
     color: var(--muted);
   }
 
@@ -644,6 +646,15 @@ h3,
   text-transform: uppercase;
 }
 
+.edu-location {
+  display: block;
+  margin-bottom: 4px;
+  color: #7c7c7c;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .experience-card time,
 .course-card time {
   display: block;
@@ -765,6 +776,20 @@ h3,
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0 14px 34px rgba(43, 147, 254, 0.36);
+}
+
+.speeches-section {
+  margin-top: 48px;
+}
+
+.speeches-section .outside-heading {
+  margin-bottom: 16px;
+}
+
+.speeches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 @media (max-width: 880px) {
