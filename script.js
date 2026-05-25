@@ -255,6 +255,46 @@ document.addEventListener("click", (e) => {
 
 setLang("ru");
 
+// Dark theme toggle
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+
+  let theme = "light";
+  if (stored === "dark" || stored === "light") {
+    theme = stored;
+  } else if (prefersDark) {
+    theme = "dark";
+  }
+
+  document.documentElement.setAttribute("data-theme", theme);
+  updateThemeIcons(theme);
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".theme-toggle");
+    if (!btn) return;
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    updateThemeIcons(next);
+  });
+})();
+
+function updateThemeIcons(theme) {
+  const btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+  const sun = btn.querySelector(".sun-icon");
+  const moon = btn.querySelector(".moon-icon");
+  if (!sun || !moon) return;
+  if (theme === "dark") {
+    sun.style.display = "none";
+    moon.style.display = "";
+  } else {
+    sun.style.display = "";
+    moon.style.display = "none";
+  }
+}
+
 // Staggered card reveal
 if ("IntersectionObserver" in window) {
   document.documentElement.classList.add("stagger");
