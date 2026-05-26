@@ -319,3 +319,12 @@ if ("IntersectionObserver" in window) {
 
   cards.forEach((el) => observer.observe(el));
 }
+
+// Visit counter
+fetch("https://api.countapi.xyz/hit/aimukambetov-cv/visits")
+  .then((r) => r.json())
+  .then((data) => {
+    const el = document.getElementById("visit-count");
+    if (el) el.textContent = data.value;
+  })
+  .catch(() => {});

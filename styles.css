@@ -809,6 +809,15 @@ h3,
   margin-top: 48px;
 }
 
+.visit-counter {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
 .speeches-section .outside-heading {
   margin-bottom: 16px;
 }
