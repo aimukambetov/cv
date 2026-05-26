@@ -11,13 +11,6 @@
     <link rel="stylesheet" href="styles.css?v=20" />
   </head>
   <body>
-    <div class="toggle-bar">
-      <button class="lang-toggle" type="button" aria-label="Toggle language">RU</button>
-      <button class="theme-toggle" type="button" aria-label="Toggle theme">
-        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-    </div>
     <main class="page-shell">
       <section class="hero-grid" aria-label="Intro">
         <div class="photo-card">
@@ -26,10 +19,13 @@
 
         <article class="hero-title card light">
           <h1>Mobile<br />Team Lead</h1>
-          <p>
-            Simple, sharp and logical interfaces. I build clean web experiences
-            with attention to detail.
-          </p>
+          <div class="hero-toggles">
+            <button class="lang-toggle" type="button" aria-label="Toggle language">RU</button>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+          </div>
         </article>
 
         <article class="card light hero-skills">
@@ -55,8 +51,9 @@
           <a href="https://maps.google.com/?q=Almaty" target="_blank" rel="noreferrer">Almaty, Kazakhstan</a>
           <a href="tel:+77075570725">+7 707 557 07 25</a>
           <a href="mailto:s.aimukambetov@gmail.com">s.aimukambetov@gmail.com</a>
-          <a href="https://github.com/aimukambetov" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/alwayswannabehappier" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="pill-linkedin" href="https://linkedin.com/in/alwayswannabehappier" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="pill-telegram" href="https://t.me/alwayswanna" target="_blank" rel="noreferrer">Telegram</a>
+          <a class="pill-instagram" href="https://www.instagram.com/alwayswannabehappier/" target="_blank" rel="noreferrer">Instagram</a>
         </nav>
       </header>
 
@@ -64,39 +61,87 @@
         <section class="column">
           <h3 class="outside-heading">Work Experience</h3>
           <article class="card light experience-card">
-            <h4>Frontend Developer</h4>
-            <strong>Freelance</strong>
-            <time>2024 - Present</time>
-            <p>
-              Building static websites, CV pages, portfolio layouts and small
-              interactive interfaces for personal and business use.
-            </p>
+            <h4>Mobile Team Lead</h4>
+            <strong>Kolesa Group</strong>
+            <time>November 2024 — Present</time>
+            <p>Leading the mobile team, driving architecture decisions, and ensuring delivery of high-quality iOS applications.</p>
             <div class="tag-cloud compact">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-              <span>UI</span>
+              <span>Leadership</span>
+              <span>Architecture</span>
+              <span>Code Review</span>
             </div>
           </article>
 
           <article class="card light experience-card">
-            <h4>Web Designer</h4>
-            <strong>Personal Projects</strong>
-            <time>2023 - 2024</time>
-            <p>
-              Designed and shipped concept pages, visual experiments and
-              presentation-ready layouts with a focus on rhythm and clarity.
-            </p>
+            <h4>Senior iOS Developer</h4>
+            <strong>Kolesa Group</strong>
+            <time>January 2024 — Present</time>
+            <p>Building and maintaining large-scale iOS applications with focus on performance, architecture, and code quality.</p>
+            <div class="tag-cloud compact">
+              <span>Swift</span>
+              <span>UIKit</span>
+              <span>Performance</span>
+            </div>
           </article>
 
           <article class="card light experience-card">
-            <h4>Junior Developer</h4>
-            <strong>Project Work</strong>
-            <time>2022 - 2023</time>
-            <p>
-              Supported frontend tasks, content updates, bug fixes and
-              responsive adjustments across small web projects.
-            </p>
+            <h4>Middle iOS Developer</h4>
+            <strong>Kolesa Group</strong>
+            <time>January 2022 — December 2023</time>
+            <p>Developed features, reviewed code, and contributed to the evolution of the iOS codebase and team practices.</p>
+            <div class="tag-cloud compact">
+              <span>SwiftUI</span>
+              <span>CoreData</span>
+              <span>CI/CD</span>
+            </div>
+          </article>
+
+          <article class="card light experience-card">
+            <h4>Junior iOS Developer</h4>
+            <strong>Kolesa Group</strong>
+            <time>September 2021 — December 2021</time>
+            <p>Started iOS development career, shipping features and fixing bugs under senior guidance.</p>
+            <div class="tag-cloud compact">
+              <span>iOS</span>
+              <span>Bug Fixing</span>
+              <span>Unit Testing</span>
+            </div>
+          </article>
+
+          <article class="card light experience-card">
+            <h4>iOS Developer</h4>
+            <strong>VILED</strong>
+            <time>April 2021 — August 2021</time>
+            <p>Built and maintained iOS application features for the marketplace platform.</p>
+            <div class="tag-cloud compact">
+              <span>UIKit</span>
+              <span>MVP</span>
+              <span>REST</span>
+            </div>
+          </article>
+
+          <article class="card light experience-card">
+            <h4>iOS Developer</h4>
+            <strong>Involta</strong>
+            <time>January 2021 — May 2021</time>
+            <p>Contributed to iOS development for industrial IoT solutions.</p>
+            <div class="tag-cloud compact">
+              <span>Swift</span>
+              <span>IoT</span>
+              <span>Bluetooth</span>
+            </div>
+          </article>
+
+          <article class="card light experience-card">
+            <h4>iOS Developer</h4>
+            <strong>Tredo Company</strong>
+            <time>January 2021 — April 2021</time>
+            <p>Developed iOS applications for e-commerce and retail sectors.</p>
+            <div class="tag-cloud compact">
+              <span>UIKit</span>
+              <span>MVP</span>
+              <span>AppStore</span>
+            </div>
           </article>
         </section>
 
@@ -134,11 +179,11 @@
               </div>
               <div>
                 <span>Russian</span>
-                <p>Fluent</p>
+                <p>Native</p>
               </div>
               <div>
                 <span>English</span>
-                <p>Intermediate</p>
+                <p>Advanced</p>
               </div>
             </div>
           </article>

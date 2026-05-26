@@ -1,14 +1,14 @@
 :root {
   color-scheme: light dark;
   --bg: #f3f7ff;
-  --ink: #111111;
+  --ink: #101828;
   --muted: #6f7378;
-  --line: #101010;
+  --line: #101828;
   --blue: #2B93FE;
   --blue-2: #2B93FE;
   --pale: #dfeaff;
   --paper: #fbfbf7;
-  --charcoal: #1d1d1b;
+  --charcoal: #101828;
   --radius: 28px;
   --gap: 12px;
 }
@@ -151,7 +151,8 @@ a {
 }
 
 [data-theme="dark"] .light,
-[data-theme="dark"] .photo-card {
+[data-theme="dark"] .photo-card,
+[data-theme="dark"] .pale {
   color: var(--ink);
 }
 
@@ -198,6 +199,13 @@ a {
   color: var(--ink);
 }
 
+[data-theme="dark"] .pill-linkedin,
+[data-theme="dark"] .pill-telegram,
+[data-theme="dark"] .pill-instagram {
+  background: var(--pale) !important;
+  color: var(--ink) !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0d1117;
@@ -223,7 +231,8 @@ a {
   }
 
   :root:not([data-theme="light"]) .light,
-  :root:not([data-theme="light"]) .photo-card {
+  :root:not([data-theme="light"]) .photo-card,
+  :root:not([data-theme="light"]) .pale {
     color: var(--ink);
   }
 
@@ -269,6 +278,13 @@ a {
   :root:not([data-theme="light"]) .outside-heading {
     color: var(--ink);
   }
+
+  :root:not([data-theme="light"]) .pill-linkedin,
+  :root:not([data-theme="light"]) .pill-telegram,
+  :root:not([data-theme="light"]) .pill-instagram {
+    background: var(--pale) !important;
+    color: var(--ink) !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -306,12 +322,12 @@ a {
 .light,
 .photo-card {
   background: var(--paper);
-  color: #090909;
+  color: #101828;
 }
 
 .pale {
   background: var(--pale);
-  color: #090909;
+  color: #101828;
 }
 
 .blue {
@@ -327,7 +343,7 @@ a {
 .photo-card {
   position: relative;
   grid-row: span 2;
-  background: #050505;
+  background: #101828;
   min-height: 326px;
 }
 
@@ -354,11 +370,7 @@ a {
   font-weight: 700;
 }
 
-.toggle-bar {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 100;
+.hero-toggles {
   display: flex;
   gap: 6px;
 }
@@ -426,7 +438,7 @@ a {
 .hero-title p:last-child {
   max-width: 280px;
   margin: 0;
-  color: #2c2c2c;
+  color: #101828;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 500;
@@ -473,7 +485,7 @@ a {
   position: relative;
   text-decoration: none;
   color: white;
-  background: #171515;
+  background: #101828;
 }
 
 .linkedin-card,
@@ -530,12 +542,27 @@ a {
   padding: 8px 16px;
   border-radius: 999px;
   background: var(--paper);
-  color: #111;
+  color: #101828;
   text-decoration: none;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
   box-shadow: 0 10px 26px rgba(19, 53, 112, 0.08);
+}
+
+.pill-linkedin {
+  background: #101828 !important;
+  color: white !important;
+}
+
+.pill-telegram {
+  background: #101828 !important;
+  color: white !important;
+}
+
+.pill-instagram {
+  background: #101828 !important;
+  color: white !important;
 }
 
 .content-grid {
@@ -570,7 +597,7 @@ h3,
 
 .outside-heading {
   margin: 24px 0 8px;
-  color: #111;
+  color: #101828;
 }
 
 .profile-card p,
@@ -613,7 +640,7 @@ h3,
   min-height: 29px;
   padding: 7px 14px;
   border-radius: 999px;
-  background: #0b0b0b;
+  background: #101828;
   color: white;
   font-size: 11px;
   font-weight: 800;
@@ -699,24 +726,24 @@ h3,
   background:
     linear-gradient(90deg, transparent 0 44%, #2B93FE 44% 56%, transparent 56%),
     radial-gradient(circle at 68% 33%, #2B93FE 0 12%, transparent 12.5%),
-    linear-gradient(135deg, #111 0 0) 38% 68% / 44px 8px no-repeat,
-    linear-gradient(45deg, #111 0 0) 70% 70% / 52px 8px no-repeat,
+    linear-gradient(135deg, #101828 0 0) 38% 68% / 44px 8px no-repeat,
+    linear-gradient(45deg, #101828 0 0) 70% 70% / 52px 8px no-repeat,
     #eef4ff;
 }
 
 .study-art {
   background:
     radial-gradient(circle at 58% 34%, #2B93FE 0 13%, transparent 13.5%),
-    linear-gradient(160deg, #111 0 0) 44% 66% / 72px 10px no-repeat,
+    linear-gradient(160deg, #101828 0 0) 44% 66% / 72px 10px no-repeat,
     linear-gradient(20deg, #2B93FE 0 0) 68% 72% / 44px 10px no-repeat,
     #eef4ff;
 }
 
 .explore-art {
   background:
-    radial-gradient(circle at 45% 31%, #111 0 12%, transparent 12.5%),
+    radial-gradient(circle at 45% 31%, #101828 0 12%, transparent 12.5%),
     linear-gradient(120deg, #2B93FE 0 0) 54% 58% / 70px 10px no-repeat,
-    linear-gradient(110deg, #111 0 0) 42% 76% / 58px 10px no-repeat,
+    linear-gradient(110deg, #101828 0 0) 42% 76% / 58px 10px no-repeat,
     #eef4ff;
 }
 
@@ -724,7 +751,7 @@ h3,
   min-height: 178px;
   background:
     radial-gradient(circle at 85% 22%, rgba(43, 147, 254, 0.9) 0 34px, transparent 35px),
-    linear-gradient(125deg, var(--charcoal), #151515);
+    linear-gradient(125deg, var(--charcoal), #101828);
 }
 
 .youtube-btn {
@@ -799,7 +826,8 @@ h3,
   }
 
   .hero-grid,
-  .content-grid {
+  .content-grid,
+  .speeches-grid {
     grid-template-columns: 1fr;
   }
 
@@ -871,7 +899,7 @@ h3,
 
   .bottom-button,
   .icon-button,
-  .toggle-bar {
+  .hero-toggles {
     display: none;
   }
 }
